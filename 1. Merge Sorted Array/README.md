@@ -33,13 +33,7 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 ```
 public void Merge(int[] nums1, int m, int[] nums2, int n)
 {
-int counter = 0
-
-for int i = m while i less than lenght of nums1
-{
-nums1[i] = nums2[counter]
-counter++
-{
+Array.Copy(nums2, 0, nums1, m, n)
 Array.Sort(nums1)
 }
 ```
