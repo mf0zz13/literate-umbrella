@@ -29,11 +29,31 @@ The result of the merge is [1].
 Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.
 ```
 
+## Lessons Learned
+* Although using a for loop to merge the two arrays, and then use the Array.Sort() method was less code the time complexity was higher. By sorting and merging the two arrays in the same for loop I was able to get a better time complexity O(n).
+
 ## Sudo-Code
 ```
 public void Merge(int[] nums1, int m, int[] nums2, int n)
 {
-Array.Copy(nums2, 0, nums1, m, n)
-Array.Sort(nums1)
+int place1 = m - 1;
+int place2 = n - 1;
+
+for(int i = (m + n) - 1; i <= 0; i--)
+{
+if (place2 < 0) break
+
+if(place1 >= 0 && nums1[place1] > nums2[place2])
+{
+nums1[i] = nums1[place1]
+place1--;
+}
+
+else
+{
+nums1[i] = nums2[place2]
+place2--
+}
+}
 }
 ```
