@@ -42,7 +42,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 ```
 
 ## Lessons Learned
-* Although using a for loop to merge the two arrays, and then use the Array.Sort() method was less code the time complexity was higher. By sorting and merging the two arrays in the same for loop I was able to get a better time complexity O(n).
+* 
 
 ## Sudo-Code
 ```
